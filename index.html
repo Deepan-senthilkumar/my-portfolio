@@ -1,71 +1,402 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Deepan Senthil - Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-    </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Deepan S - Frontend Developer portfolio. React.js, JavaScript, HTML5, CSS3, responsive UI, admin dashboards, and web experiences." />
+  <title>Deepan S | Frontend Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <img src="logo.jpg" alt="Logo">
-    <h1>Deepan S</h1>
-    <div>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Skills</a>
-      <a href="#">Projects</a>
-      <a href="#">Recommendations</a>
-    </div>
-  </nav>
+  <!-- SITE HEADER / NAVBAR -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#home" class="brand">Deepan<span>S</span></a>
 
-  <!-- Profile -->
-  <div class="profile-name">Deepan Senthil</div>
-  <div class="profile-caption">Developer | Coder | Gamer | Video Editor</div>
+      <div class="nav-controls">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
 
-  <!-- About Me -->
-  <div class="about-box">
-    <h2>About Me</h2>
-    <p>I am passionate about development and coding, with a strong interest in gaming and video editing. 
-       My journey involves creating innovative projects and continuously learning new technologies.</p>
-  </div>
+        <a href="mailto:deepansenthil098@gmail.com" class="nav-btn">
+          <span class="status-dot"></span>
+          Hire Me
+        </a>
 
-  <!-- Skills -->
-  <div class="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>C, C++</li>
-      <li>Embedded Systems & IoT</li>
-      <li>Video Editing</li>
-      <li>Gaming Content Creation</li>
-    </ul>
-  </div>
+        <!-- Hamburger Menu Button -->
+        <button class="menu-btn" id="menuBtn" aria-label="Open Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
 
-  <!-- Projects -->
-  <div class="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>Smart Agriculture System</li>
-      <li>Engine Control Unit</li>
-      <li>Smart Home Automation</li>
-    </ul>
-  </div>
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero section" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">Frontend Developer · Chennai</p>
+        <h1>Hi, I’m <span>Deepan S</span><br>building clean web interfaces.</h1>
+        <p class="hero-text">
+          I create responsive, modern, and user-friendly frontend interfaces using
+          HTML, CSS, JavaScript, and React.js. I also design practical admin dashboards
+          and portfolio websites with clean UI and mobile-first layouts.
+        </p>
 
-  <!-- Recommendations -->
-  <div class="recommendations">
-    <h2>Recommendations</h2>
-    <ul id="recommendationList">
-      <li>Deepan is a quick learner and adapts to new challenges easily.</li>
-      <li>He delivers clean and efficient code on time.</li>
-      <li>Very creative in both development and video editing.</li>
-    </ul>
-    <input type="text" id="newRecommendation" placeholder="Write a recommendation...">
-    <button onclick="addRecommendation()">Submit</button>
-  </div>
+        <div class="hero-actions">
+          <a href="#projects" class="btn primary">View Projects</a>
+          <a href="mailto:deepansenthil098@gmail.com" class="btn secondary">Contact Me</a>
+        </div>
 
+        <div class="social-row">
+          <a href="https://linkedin.com/in/deepan49" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/Deepan-senthilkumar" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://youtube.com/@jerryedits4" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="photo-frame">
+          <img src="profile.png" alt="Deepan S profile photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="avatar-fallback" style="display: none;">DS</div>
+        </div>
+        <div class="floating-card">
+          <span class="status-dot"></span>
+          Open to Roles
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS COUNTERS -->
+    <section class="stats">
+      <div class="stat-box">
+        <h3 class="stat-number" data-val="6">6+</h3>
+        <p>Months Experience</p>
+      </div>
+      <div class="stat-box">
+        <h3 class="stat-number" data-val="3">3+</h3>
+        <p>Projects Built</p>
+      </div>
+      <div class="stat-box">
+        <h3 class="stat-number" data-val="277000">277K+</h3>
+        <p>YouTube Views</p>
+      </div>
+      <div class="stat-box">
+        <h3 class="stat-number" data-val="536">536+</h3>
+        <p>Subscribers</p>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about" id="about">
+      <div class="section-title">
+        <p>About Me</p>
+        <h2>Simple design, clean code, responsive experience.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I am a BE Electronics and Communication Engineering graduate from
+            Jai Shriram Engineering College. I am currently working as a Frontend
+            Developer at Ocean Softwares, Chennai.
+          </p>
+          <p>
+            My work focuses on responsive frontend interfaces, admin panel layouts,
+            dashboard pages, portfolio websites, and UI improvements for real-world
+            web applications.
+          </p>
+          <p>
+            I enjoy turning ideas into clean, usable, and attractive digital products.
+            I am actively looking for full-time Frontend Developer or React Developer roles.
+          </p>
+        </div>
+
+        <div class="about-cards">
+          <!-- Card 1 -->
+          <div class="mini-card">
+            <div class="mini-card-header">
+              <span>01</span>
+              <svg class="mini-card-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3>Frontend UI</h3>
+            <p>Responsive websites, landing pages, and clean user interfaces.</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="mini-card">
+            <div class="mini-card-header">
+              <span>02</span>
+              <svg class="mini-card-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="9" y1="3" x2="9" y2="21"></line>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+              </svg>
+            </div>
+            <h3>Admin Panels</h3>
+            <p>Dashboards, tables, role-based layouts, and management screens.</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="mini-card">
+            <div class="mini-card-header">
+              <span>03</span>
+              <svg class="mini-card-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <h3>Portfolio Sites</h3>
+            <p>Personal branding websites with modern layouts and strong presentation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="section-title">
+        <p>Skills</p>
+        <h2>Technologies I work with</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Frontend</h3>
+          <div class="tag-list">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React.js</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Design & UI</h3>
+          <div class="tag-list">
+            <span>Responsive Design</span><span>Mobile-First</span><span>UI/UX</span><span>Admin UI</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Tools</h3>
+          <div class="tag-list">
+            <span>Git</span><span>GitHub</span><span>VS Code</span><span>Figma</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Other</h3>
+          <div class="tag-list">
+            <span>Python</span><span>REST API Basics</span><span>IoT Basics</span><span>AI Tools</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section experience" id="experience">
+      <div class="section-title">
+        <p>Experience</p>
+        <h2>Professional journey</h2>
+      </div>
+
+      <div class="timeline-card">
+        <div class="timeline-head">
+          <div>
+            <h3>Frontend Developer</h3>
+            <p>Ocean Softwares · Chennai, Tamil Nadu</p>
+          </div>
+          <span class="timeline-date">Dec 2024 – Present</span>
+        </div>
+
+        <Ol class="work-list">
+          <li>Built responsive frontend interfaces for client projects using HTML, CSS, JavaScript, and React.js.</li>
+          <li>Designed and developed admin panel dashboards with clean UI and role-based layouts.</li>
+          <li>Improved responsiveness and user experience across desktop, tablet, and mobile screens.</li>
+          <li>Collaborated with the development team to complete projects under real-world deadlines.</li>
+          <li>Used AI-assisted development tools to speed up workflow while maintaining code quality.</li>
+        </Ol>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section projects" id="projects">
+      <div class="section-title center">
+        <p>Projects</p>
+        <h2>Selected work</h2>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <a href="https://github.com/Deepan-senthilkumar" target="_blank" rel="noopener" class="project-card">
+          <div class="project-top">
+            <span>01</span>
+            <span class="project-link-icon" aria-label="Portfolio project">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </span>
+          </div>
+          <div class="project-info">
+            <h3>Personal Portfolio Website</h3>
+            <p>
+              A responsive personal portfolio website showcasing projects, skills,
+              experience, and contact details with modern UI and mobile-first layout.
+            </p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="https://jerry-edits.vercel.app/" target="_blank" rel="noopener" class="project-card">
+          <div class="project-top">
+            <span>02</span>
+            <span class="project-link-icon" aria-label="Jerry Edits Website">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </span>
+          </div>
+          <h3>Jerry Edits YouTube Portfolio</h3>
+          <p>
+            Built a responsive multi-page portfolio website for a YouTube channel
+            with video gallery, channel insights, top videos, and contact page.
+          </p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="https://github.com/Deepan-senthilkumar" target="_blank" rel="noopener" class="project-card">
+          <div class="project-top">
+            <span>03</span>
+            <span class="project-link-icon" aria-label="Admin dashboard project">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </span>
+          </div>
+          <h3>Admin Dashboard UI</h3>
+          <p>
+            Designed clean dashboard screens with analytics cards, tables, filters,
+            and role-based management layouts for admin panel workflows.
+          </p>
+          <div class="project-tags">
+            <span>React</span><span>CSS</span><span>UI Design</span>
+          </div>
+        </a>
+
+        <!-- Project 4 -->
+        <a href="https://github.com/Deepan-senthilkumar" target="_blank" rel="noopener" class="project-card">
+          <div class="project-top">
+            <span>04</span>
+            <span class="project-link-icon" aria-label="Smart irrigation project">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </span>
+          </div>
+          <h3>Smart Irrigation Network</h3>
+          <p>
+            An IoT-based system concept using sensors and Python logic to monitor
+            soil moisture and support automated watering decisions.
+          </p>
+          <div class="project-tags">
+            <span>Python</span><span>IoT</span><span>Hardware</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section education">
+      <div class="section-title">
+        <p>Education & Certification</p>
+        <h2>Learning background</h2>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-card">
+          <span>2022 – Apr 2026</span>
+          <h3>BE Electronics and Communication Engineering</h3>
+          <p>Jai Shriram Engineering College</p>
+        </div>
+        <div class="edu-card">
+          <span>2021 – 2022</span>
+          <h3>Higher Secondary</h3>
+          <p>Gandhi Vidyalaya Matric Hr Sec School</p>
+        </div>
+        <div class="edu-card">
+          <span>2019 – 2020</span>
+          <h3>SSLC</h3>
+          <p>Gandhi Vidyalaya Matric Hr Sec School</p>
+        </div>
+        <a href="https://coursera.org/share/57b1f9be9dd07d5d45eefe106dd7801f" target="_blank" rel="noopener" class="edu-card highlight">
+          <span>IBM · Aug 2025</span>
+          <h3>Introduction to HTML, CSS & JavaScript</h3>
+          <p>Credential ID: <span class="credential-id">RUP2GK0G10LJ</span></p>
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact" id="contact">
+      <div class="contact-box">
+        <div class="contact-intro">
+          <p class="eyebrow">Let’s connect</p>
+          <h2>Looking for a frontend developer?</h2>
+          <p>
+            I am open to full-time Frontend Developer and React Developer roles.
+            Feel free to contact me for opportunities or collaborations.
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <a href="mailto:deepansenthil098@gmail.com" class="btn primary">Email Me</a>
+          <a href="tel:+917639432868" class="btn secondary">Call Me</a>
+        </div>
+
+        <div class="contact-details">
+          <div class="detail-item">
+            <span class="detail-label">Email</span>
+            <span class="detail-val">deepansenthil098@gmail.com</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Phone</span>
+            <span class="detail-val">+91 7639432868</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Location</span>
+            <span class="detail-val">Chennai, Tamil Nadu</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Languages</span>
+            <span class="detail-val">Tamil, English</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Deepan S. Built with HTML, CSS & JavaScript.</p>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
