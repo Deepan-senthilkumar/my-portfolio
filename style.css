@@ -320,7 +320,7 @@ main > section + section {
 }
 
 .photo-frame {
-  width: min(240px, 60vw);
+  width: min(320px, 70vw);
   aspect-ratio: 1 / 1;
   border-radius: 12px;
   overflow: hidden;
@@ -331,6 +331,7 @@ main > section + section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(1.25); /* Permanently zoomed in */
   filter: grayscale(10%) contrast(95%);
 }
 
@@ -791,6 +792,14 @@ main > section + section {
   font-size: 0.85rem;
   color: var(--dark);
   font-weight: 500;
+}
+
+.detail-val a {
+  transition: color var(--transition-fast);
+}
+
+.detail-val a:hover {
+  color: var(--accent);
 }
 
 /* ==========================================================================
