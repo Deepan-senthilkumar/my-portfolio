@@ -150,13 +150,13 @@
 
         <div class="hero-actions">
           <a href="#projects" class="btn primary">View Projects</a>
-          <a href="assets/Deepan_S_Resume.pdf" download="Deepan_S_Resume.pdf" class="btn secondary">
+          <a href="assets/Deepan_S.pdf" download="Deepan_S.pdf" class="btn secondary">
             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right: 5px;">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
               <polyline points="7 10 12 15 17 10"></polyline>
               <line x1="12" y1="15" x2="12" y2="3"></line>
             </svg>
-            Download CV
+            Resume
           </a>
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=deepansenthil098@gmail.com" target="_blank" rel="noopener" class="btn secondary">Contact Me</a>
         </div>
@@ -164,6 +164,7 @@
         <div class="social-row">
           <a href="https://linkedin.com/in/deepan49" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/Deepan-senthilkumar" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://wa.me/917639432868" target="_blank" rel="noopener">WhatsApp</a>
           <a href="https://youtube.com/@jerryedits4" target="_blank" rel="noopener">YouTube</a>
         </div>
       </div>
@@ -192,11 +193,11 @@
         <p>Projects Built</p>
       </div>
       <div class="stat-box">
-        <h3 class="stat-number" data-val="277000">277K+</h3>
+        <h3 class="stat-number" id="yt-views-count" data-val="285000">285K+</h3>
         <p>YouTube Views</p>
       </div>
       <div class="stat-box">
-        <h3 class="stat-number" data-val="536">536+</h3>
+        <h3 class="stat-number" id="yt-subs-count" data-val="542">542+</h3>
         <p>Subscribers</p>
       </div>
     </section>
@@ -213,7 +214,7 @@
           <p>
             I am a BE Electronics and Communication Engineering graduate from
             Jai Shriram Engineering College. I am currently working as a Full Stack
-            Developer at Ocean Softwares Pvt Ltd, Chennai.
+            Developer at Ocean Softwares Pvt Ltd., Chennai.
           </p>
           <p>
             My work focuses on full-stack web applications, responsive frontend interfaces, admin panel layouts,
@@ -282,25 +283,39 @@
         <div class="skill-card">
           <h3>Frontend</h3>
           <div class="tag-list">
-            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React.js</span>
+            <span class="tag-highlight">React.js</span>
+            <span class="tag-highlight">JavaScript</span>
+            <span>HTML5</span>
+            <span>CSS3</span>
           </div>
         </div>
+
         <div class="skill-card">
-          <h3>Backend & Mobile</h3>
+          <h3>Backend & Database</h3>
           <div class="tag-list">
-            <span>Node.js</span><span>Express.js</span><span>REST APIs</span><span>Flutter</span><span>Dart</span>
+            <span class="tag-highlight">Node.js</span>
+            <span>Express.js</span>
+            <span>REST APIs</span>
+            <span>SQL</span>
           </div>
         </div>
+
         <div class="skill-card">
-          <h3>Design & UI</h3>
+          <h3>Mobile & Languages</h3>
           <div class="tag-list">
-            <span>Responsive Design</span><span>Mobile-First</span><span>UI/UX</span><span>Admin UI</span>
+            <span class="tag-highlight">Flutter</span>
+            <span class="tag-highlight">Python</span>
+            <span>Dart</span>
+            <span>C</span>
           </div>
         </div>
+
         <div class="skill-card">
-          <h3>Tools & Other</h3>
+          <h3>Tools</h3>
           <div class="tag-list">
-            <span>Git</span><span>GitHub</span><span>VS Code</span><span>Figma</span><span>Python</span><span>AI Tools</span>
+            <span class="tag-highlight">Git</span>
+            <span class="tag-highlight">Postman</span>
+            <span>GitHub</span>
           </div>
         </div>
       </div>
@@ -324,11 +339,119 @@
 
         <ol class="work-list">
           <li>Built responsive frontend interfaces for client projects using HTML, CSS, JavaScript, and React.js.</li>
-          <li>Designed and developed admin panel dashboards with clean UI and role-based layouts.</li>
-          <li>Improved responsiveness and user experience across desktop, tablet, and mobile screens.</li>
-          <li>Collaborated with the development team to complete projects under real-world deadlines.</li>
-          <li>Used AI-assisted development tools to speed up workflow while maintaining code quality.</li>
+          <li>Created multiple UI design iterations based on client requirements, finalizing and building approved layouts.</li>
+          <li>Developed and integrated production Flutter mobile apps with GetX state management and REST APIs.</li>
+          <li>Integrated third-party payment gateways (Razorpay) and live external services into commercial apps.</li>
+          <li>Improved performance, mobile-first responsiveness, and user experience across diverse client sectors.</li>
         </ol>
+
+        <!-- Client Projects & Deliverables at Ocean Softwares (Collapsible Dropdown) -->
+        <details class="client-projects-box">
+          <summary class="client-projects-summary">
+            <div class="summary-text">
+              <h4 class="client-subheading">Commercial Projects & Deliverables</h4>
+              <p class="client-subtext">Selectively picked live production mobile apps & commercial websites contributed to at OceanSoftwares Pvt Ltd.</p>
+            </div>
+            <span class="accordion-badge">
+              <span>View Projects</span>
+              <svg class="chevron-icon" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </summary>
+
+          <div class="client-projects-content">
+            <!-- 1. Mobile Applications -->
+            <div class="deliverables-group">
+              <span class="deliverables-title">Production Mobile Apps (Google Play Store ↗)</span>
+              <div class="deliverables-grid">
+                <!-- App 1: Prompt Trade Fairs -->
+                <a href="https://play.google.com/store/apps/details?id=com.expo_admin.expo_admin" target="_blank" rel="noopener" class="deliverable-item">
+                  <span class="deliverable-name">Prompt Trade Fairs</span>
+                  <span class="deliverable-arrow">↗</span>
+                  <span class="deliverable-desc">Trade expo customer app for stall & visitor enquiries · Flutter & API integration</span>
+                </a>
+
+                <!-- App 2: Anbu Suzh Ulagu -->
+                <a href="https://play.google.com/store/apps/details?id=com.ocean.charity" target="_blank" rel="noopener" class="deliverable-item">
+                  <span class="deliverable-name">Anbu Suzh Ulagu</span>
+                  <span class="deliverable-arrow">↗</span>
+                  <span class="deliverable-desc">Charity donation app · Full UI design, API & Razorpay payment integration</span>
+                </a>
+
+                <!-- Hidden Apps:
+                <a href="https://play.google.com/store/apps/details?id=com.expo_admin.expo_admin" target="_blank" rel="noopener" class="deliverable-item">
+                  <span class="deliverable-name">Prompt Exhibitor</span>
+                  <span class="deliverable-arrow">↗</span>
+                  <span class="deliverable-desc">Expo customer app for stall & visitor bookings · Flutter & API integration</span>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.ocean.ingenious" target="_blank" rel="noopener" class="deliverable-item">
+                  <span class="deliverable-name">Contact Qube</span>
+                  <span class="deliverable-arrow">↗</span>
+                  <span class="deliverable-desc">Business networking mobile app · UI enhancements & API integration</span>
+                </a>
+                -->
+              </div>
+            </div>
+
+            <!-- 2. Live Commercial Websites -->
+            <div class="deliverables-group">
+              <span class="deliverables-title">Live Commercial Websites (Live Sites ↗)</span>
+              <div class="deliverables-grid">
+                <!-- Site 1: Colours Boutique -->
+                <a href="https://coloursboutique.com/" target="_blank" rel="noopener" class="deliverable-item">
+                  <span class="deliverable-name">Colours Boutique</span>
+                  <span class="deliverable-arrow">↗</span>
+                  <span class="deliverable-desc">Fashion boutique online store · Frontend & UI development</span>
+                </a>
+
+                <!-- Site 2: Auvri Plus -->
+                <a href="https://www.auvriplus.com/" target="_blank" rel="noopener" class="deliverable-item">
+                  <span class="deliverable-name">Auvri Plus</span>
+                  <span class="deliverable-arrow">↗</span>
+                  <span class="deliverable-desc">Herbal wellness & healthcare e-commerce product store · Frontend & UI</span>
+                </a>
+
+                <!-- Site 3: CNI Foundation -->
+                <a href="https://cnifoundation.in/" target="_blank" rel="noopener" class="deliverable-item">
+                  <span class="deliverable-name">CNI Foundation</span>
+                  <span class="deliverable-arrow">↗</span>
+                  <span class="deliverable-desc">Civil building infrastructure & construction website · Frontend & UI</span>
+                </a>
+
+                <!-- Site 4: Jeeva Memorial Public School | JMPSS -->
+                <a href="https://jmpsss.com/" target="_blank" rel="noopener" class="deliverable-item">
+                  <span class="deliverable-name">Jeeva Memorial Public School</span>
+                  <span class="deliverable-arrow">↗</span>
+                  <span class="deliverable-desc">School institutional website · Frontend & UI development</span>
+                </a>
+
+                <!-- Hidden Sites:
+                <a href="https://www.prrayashacollections.com/" target="_blank" rel="noopener" class="deliverable-item">
+                  <span class="deliverable-name">Prrayasha Collections</span>
+                  <span class="deliverable-arrow">↗</span>
+                  <span class="deliverable-desc">Ethnic & dress sales e-commerce · Frontend & UI development</span>
+                </a>
+                <a href="https://youwomenswear.com/" target="_blank" rel="noopener" class="deliverable-item">
+                  <span class="deliverable-name">You Women's Wear</span>
+                  <span class="deliverable-arrow">↗</span>
+                  <span class="deliverable-desc">Women's apparel fashion e-commerce store · Frontend & UI</span>
+                </a>
+                <a href="https://nandhinisilks.com/" target="_blank" rel="noopener" class="deliverable-item">
+                  <span class="deliverable-name">Nandhini Silks</span>
+                  <span class="deliverable-arrow">↗</span>
+                  <span class="deliverable-desc">Traditional silks & sarees online store · Frontend & UI</span>
+                </a>
+                <a href="https://arunaandco.in/" target="_blank" rel="noopener" class="deliverable-item">
+                  <span class="deliverable-name">Aruna & Co</span>
+                  <span class="deliverable-arrow">↗</span>
+                  <span class="deliverable-desc">Wholesale paper distributor corporate website · Frontend & UI</span>
+                </a>
+                -->
+              </div>
+            </div>
+          </div>
+        </details>
       </div>
     </section>
 
@@ -432,23 +555,27 @@
           </div>
         </a>
 
-        <!-- Project 5: Prompt Trade Fairs (client project, no public link) -->
-        <div class="project-card project-card-static">
+        <!-- Project 5: Prompt Trade Fairs -->
+        <a href="https://play.google.com/store/apps/details?id=com.expoapp.expo_user" target="_blank" rel="noopener" class="project-card">
           <div class="project-top">
             <span>05</span>
+            <span class="project-link-icon" aria-label="Prompt Manager App">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </span>
           </div>
           <div class="project-info">
             <h3>Prompt Trade Fairs</h3>
             <p>
-              Two Flutter admin apps built for a trade expo client, integrated with a
-              real backend API using GetX and a controller/service/model architecture.
-              (Client project — code private)
+              Two Flutter mobile apps built for trade expos — customer stall & visitor enquiry app and employee exhibitor lead management with GetX architecture and full API integration.
             </p>
             <div class="project-tags">
-              <span>Flutter</span><span>GetX</span><span>Client Project</span>
+              <span>Flutter</span><span>GetX</span><span>Play Store ↗</span>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </section>
 
@@ -522,8 +649,8 @@
             <span class="detail-val"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=deepansenthil098@gmail.com" target="_blank" rel="noopener">deepansenthil098@gmail.com</a></span>
           </div>
           <div class="detail-item">
-            <span class="detail-label">Phone</span>
-            <span class="detail-val">+91 7639432868</span>
+            <span class="detail-label">Phone & WhatsApp</span>
+            <span class="detail-val"><a href="https://wa.me/917639432868" target="_blank" rel="noopener">+91 7639432868</a></span>
           </div>
           <div class="detail-item">
             <span class="detail-label">Location</span>
