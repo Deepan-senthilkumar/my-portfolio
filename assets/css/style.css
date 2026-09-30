@@ -495,7 +495,7 @@ main > section + section {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 
 .skills-section .skill-card {
@@ -510,21 +510,39 @@ main > section + section {
   font-family: var(--font-heading);
   font-size: 1.05rem;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .tag-list {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 .tag-list span {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  color: var(--text);
+  color: var(--muted);
   border-bottom: 1px solid var(--line);
   padding-bottom: 2px;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.tag-list span:hover {
+  color: var(--dark);
+  border-bottom-color: var(--dark);
+}
+
+/* Highlighted / Core primary skills in Box-Free style */
+.tag-list span.tag-highlight {
+  color: var(--dark);
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent);
+}
+
+.tag-list span.tag-highlight:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 /* ==========================================================================
@@ -587,6 +605,165 @@ main > section + section {
 
 .work-list li + li {
   margin-top: 8px;
+}
+
+/* ==========================================================================
+   CLIENT DELIVERABLES & COMMERCIAL PROJECTS (Box-Free Collapsible)
+   ========================================================================== */
+details.client-projects-box {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.client-projects-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  padding: 4px 0;
+  transition: opacity var(--transition-fast);
+}
+
+.client-projects-summary::-webkit-details-marker {
+  display: none;
+}
+
+.client-projects-summary:hover {
+  opacity: 0.9;
+}
+
+.summary-text {
+  flex: 1;
+}
+
+.client-subheading {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.client-subtext {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.accordion-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(79, 70, 229, 0.15);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.client-projects-summary:hover .accordion-badge {
+  background: #dbe4ff;
+  border-color: var(--accent);
+}
+
+.chevron-icon {
+  transition: transform var(--transition-fast);
+}
+
+details.client-projects-box[open] .chevron-icon {
+  transform: rotate(180deg);
+}
+
+.client-projects-content {
+  padding-top: 24px;
+  animation: deliverablesFadeIn 0.3s ease-out;
+}
+
+@keyframes deliverablesFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.deliverables-group {
+  margin-bottom: 24px;
+}
+
+.deliverables-group:last-child {
+  margin-bottom: 0;
+}
+
+.deliverables-title {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.deliverables-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 28px;
+}
+
+.deliverable-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  row-gap: 2px;
+  column-gap: 8px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+  transition: border-color var(--transition-fast);
+}
+
+.deliverable-item:hover {
+  border-bottom-color: var(--dark);
+}
+
+.deliverable-name {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--dark);
+  font-family: var(--font-heading);
+  transition: color var(--transition-fast);
+}
+
+.deliverable-arrow {
+  font-size: 0.85rem;
+  color: var(--muted);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.deliverable-item:hover .deliverable-arrow {
+  color: var(--accent);
+  transform: translate(2px, -2px);
+}
+
+.deliverable-item:hover .deliverable-name {
+  color: var(--accent);
+}
+
+.deliverable-desc {
+  grid-column: 1 / -1;
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.4;
 }
 
 /* ==========================================================================
@@ -945,7 +1122,7 @@ footer a:hover {
     padding: 36px 24px;
   }
 
-  .skills-grid, .contact-details {
+  .skills-grid, .contact-details, .deliverables-grid {
     grid-template-columns: 1fr;
     gap: 12px;
   }
@@ -969,6 +1146,12 @@ footer a:hover {
     flex-direction: column;
     align-items: flex-start;
     gap: 2px;
+  }
+
+  .client-projects-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
 
   footer {

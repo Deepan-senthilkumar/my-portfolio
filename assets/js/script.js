@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initScrollReveal();
   initStatsCounter();
+  initLiveYouTubeStats();
 });
 
 /* ==========================================================================
@@ -112,4 +113,64 @@ function formatStatValue(val) {
     return `${Math.floor(val / 1000)}K+`;
   }
   return `${val}+`;
+}
+
+/* ==========================================================================
+   CLIENT DELIVERABLES ACCORDION TOGGLE
+   ========================================================================== */
+const deliverablesBox = document.querySelector('.client-projects-box');
+if (deliverablesBox) {
+  const badgeText = deliverablesBox.querySelector('.accordion-badge span');
+  deliverablesBox.addEventListener('toggle', () => {
+    if (badgeText) {
+      badgeText.textContent = deliverablesBox.open ? 'Hide Projects' : 'View Projects';
+    }
+  });
+}
+
+/* ==========================================================================
+   LIVE YOUTUBE STATS FETCH (Jerry Edits API)
+   ========================================================================== */
+function initLiveYouTubeStats() {
+  const viewsEl = document.getElementById('yt-views-count');
+  const subsEl = document.getElementById('yt-subs-count');
+  if (!viewsEl || !subsEl) return;
+
+  // 1. Instant Cache Render from localStorage
+  const cachedStats = localStorage.getItem('jerry_stats');
+  if (cachedStats) {
+    try {
+      const parsed = JSON.parse(cachedStats);
+      applyYouTubeStats(parsed, viewsEl, subsEl);
+    } catch (e) {}
+  }
+
+  // 2. Fetch fresh live data from Jerry Edits API
+  fetch('https://jerry-edits-backend.onrender.com/api/stats')
+    .then(res => res.json())
+    .then(data => {
+      if (data && data.success && data.data) {
+        localStorage.setItem('jerry_stats', JSON.stringify(data.data));
+        applyYouTubeStats(data.data, viewsEl, subsEl);
+      }
+    })
+    .catch(err => {
+      console.warn('YouTube stats live fetch:', err.message);
+    });
+}
+
+function applyYouTubeStats(data, viewsEl, subsEl) {
+  if (!data) return;
+  const totalViews = parseInt(data.totalViews, 10);
+  const subscribers = parseInt(data.subscribers, 10);
+
+  if (!isNaN(totalViews) && totalViews > 0) {
+    viewsEl.setAttribute('data-val', totalViews);
+    viewsEl.textContent = formatStatValue(totalViews);
+  }
+
+  if (!isNaN(subscribers) && subscribers > 0) {
+    subsEl.setAttribute('data-val', subscribers);
+    subsEl.textContent = `${subscribers}+`;
+  }
 }
