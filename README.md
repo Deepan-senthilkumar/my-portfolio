@@ -1,6 +1,6 @@
-# Deepan S - Frontend Developer Portfolio
+# Deepan S - Flutter & Full Stack Developer Portfolio
 
-A responsive, modern personal portfolio website built with clean HTML5, CSS3, and JavaScript.
+A responsive, modern personal portfolio website built with clean HTML5, CSS3, and JavaScript, highlighting cross-platform Flutter mobile applications and full-stack web engineering.
 
 ## 🚀 Live Demo
 - **URL**: [https://portfolio-deepan.vercel.app/](https://portfolio-deepan.vercel.app/)
